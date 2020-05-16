@@ -3,10 +3,28 @@
 % Minimal set of packages needed to compile
 \usepackage[noadjust]{cite}
 \bibliographystyle{IEEEtran}
-\usepackage{siunitx}
+
 \usepackage[plain]{fancyref}
+\renewcommand{\freffigname}{Fig.}
+\renewcommand{\Freffigname}{Fig.} 
+\renewcommand{\freftabname}{Table}
+\renewcommand{\Freftabname}{Table}
+\frefformat{plain}{\fancyrefeqlabelprefix}{(#1)} 
+\Frefformat{plain}{\fancyrefeqlabelprefix}{(#1)} 
 \usepackage{graphicx}
+\usepackage{siunitx}
 \usepackage{booktabs}
+\usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{%
+	colorlinks=true,
+	linkcolor=violet,
+	urlcolor=blue,
+	citecolor=blue,
+	pdfauthor={James Kenneally III},
+	pdftitle={Utilization of bio-inspired fin structure on the enhancement of UUV maneuverability},
+	pdfsubject={bioinspired design},
+	pdfkeywords={fish, fins, UUV, bioinspiration, biomimetics, maneuvering, agility}}
 
 \title{Utilization of Bio-inspired Fin Structure on the Enhancement of UUV Maneuverability}
 \author{James Kenneally III\thanks{Author is with the Department of Weapons, Robotics, and Control Engineering at the United States Naval Academy. Address for correspondence: \emph{m213402@usna.edu}}}
@@ -17,6 +35,10 @@
 \begin{abstract}
 The United States Navy continues to emphasize the importance of advancements in unmanned underwater vehicles (UUV) for battlespace superiority.  Oceanic researchers rely on UUVs to collect data for environmental analysis.  In this project, we consider previous studies of fish locomotion.  Studies of fish activity stimulated by fin thrust inspires the bio-inspired fin designs used in this project.  Using equations of motion and hardware recreation of fins, this project builds on previous research, which did not compare multiple fin types.  However, we will study the application of various bio-inspired fin designs to optimize agility for UUVs utilizing astern propulsion at a constant velocity.  A parallel study for the population and placement of fins on UUVs will produce detailed results for optimizing agility.  We intend on demonstrating this through simulation and a proof-of-concept demonstration.  The analysis of the system will focus on results for turn radius, angular velocity, and angular acceleration of the UUV for each fin type.  The simulation will be constructed in Simulink following previous models.  The proof-of-concept experiment entails attaching carbon fiber fins to the base UUV structure.  Sensors within the UUV system will record the kinematics of the system.  The expected total cost of the project is just over \$30,000.  We have devised a schedule with the intent of completing the research in one year.  The primary risk of damaging equipment is mitigated by waterproofing hardware.  The risk of failed communication with the UUV is eliminated by onboard data logging.  The results from research in conjunction with MIDN Klatt’s findings will optimize UUV agility using bio-inspired fins, a new approach to UUV locomotion.  
 \end{abstract}
+
+\begin{IEEEkeywords}
+fish, fins, UUV, bioinspiration, biomimetics, maneuvering, agility
+\end{IEEEkeywords}
 
 \section{Background and motivation}
 \IEEEPARstart{T}{he underwater environment} has become a topic of concern for many engineers.  Widespread inexperience in the domain has caused countless challenges to engineering principles.  Attempts to develop underwater autonomous vehicles similar to aerial drones has proven ineffective.  The ocean environment produces powerful and unpredictable currents, challenging the UUV’s stabilization \cite{risen2019underwater}.  Signal processing has proven a primary obstacle for engineers to overcome.  Radio waves do not transmit through water, and underwater vehicles cannot be seen by operators \cite{risen2019underwater}.  This validates the necessity of the unmanned underwater vehicle to be truly autonomous, acting independently of user operation.  
